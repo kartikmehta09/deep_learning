@@ -1,8 +1,66 @@
+Accuracy F Score https://medium.com/datadriveninvestor/accuracy-trap-pay-attention-to-recall-precision-f-score-auc-d02f28d3299c
+
+Reading images https://www.geeksforgeeks.org/working-images-python/
+
+https://codereview.stackexchange.com/questions/183187/crop-multiple-images-from-single-image
+
+https://coderwall.com/p/ovlnwa/use-python-and-pil-to-slice-an-image-vertically
+
+https://pypi.org/project/image_slicer/
+
+https://stackoverflow.com/questions/5953373/how-to-split-image-into-multiple-pieces-in-python
+
+https://stackoverflow.com/questions/5953373/how-to-split-image-into-multiple-pieces-in-python
+
+LUDWIG https://github.com/uber/ludwig https://eng.uber.com/introducing-ludwig/
+
+scala map https://stackoverflow.com/questions/43587835/map-column-values-to-a-a-numeric-type-in-spark
+
+scala df https://docs.databricks.com/spark/latest/dataframes-datasets/introduction-to-dataframes-scala.html
+
+Cross validation https://bryancutler.github.io/cv-pipelines/ Hyper parameter https://www.oreilly.com/ideas/big-datas-biggest-secret-hyperparameter-tuning
+cross val, 10 fold https://rapidminer.com/blog/validate-models-cross-validation/
+
+Best Model https://forums.databricks.com/questions/12097/pyspark-how-to-get-best-params-in-grid-search.html
+https://mapr.com/blog/churn-prediction-sparkml/
+https://mapr.com/blog/fast-data-processing-pipeline-predicting-flight-delays-using-apache-apis-pt-1/
+
+https://blog.epigno.systems/2017/01/03/machine-learning-with-spark-3/
+https://dzone.com/articles/churn-prediction-with-apache-spark-machine-learning
+
+https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/spark-model-consumption
+
+https://cdn2.hubspot.net/hubfs/438089/notebooks/spark2.0/ML%20persistence%20in%202.0.html
+https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-mllib/spark-mllib-pipelines-persistence.html
+
+https://spark.apache.org/docs/2.2.0/mllib-pmml-model-export.html
+https://cdn2.hubspot.net/hubfs/438089/notebooks/spark2.0/ML%20persistence%20in%202.0.html
+
+https://databricks.com/blog/2016/05/31/apache-spark-2-0-preview-machine-learning-model-persistence.html
+https://stackoverflow.com/questions/33027767/save-ml-model-for-future-usage
+https://spark.apache.org/docs/2.2.0/mllib-pmml-model-export.html
+https://stackoverflow.com/questions/45986697/using-saved-spark-model-to-evaluate-new-data
+https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/ml/PipelineExample.scala
+
+case class https://mapr.com/blog/predicting-breast-cancer-using-apache-spark-machine-learning-logistic-regression/
+
+Data Engineering https://towardsdatascience.com/feature-encoding-made-simple-with-spark-2-3-0-part-2-5bfc869a809a 
+
+python udf https://databricks.com/blog/2017/10/30/introducing-vectorized-udfs-for-pyspark.html 
+
 Model export https://docs.azuredatabricks.net/_static/notebooks/model-export-scala.html
+
+https://jaceklaskowski.gitbooks.io/mastering-apache-spark/spark-mllib/spark-mllib-pipelines-persistence.html
+
+https://www.phdata.io/exploring-spark-mllib-part-4-exporting-the-model-for-use-outside-of-spark/
 
 Model save train, test, split https://dataplatform.cloud.ibm.com/analytics/notebooks/89492fd6-a641-4819-9176-3d9381561df9/view?access_token=d80bef1a172d1d83d3721b101886337158457281774186f181a2e6a5b57f5ec7
 
+https://stackoverflow.com/questions/33174443/how-to-save-a-spark-dataframe-as-csv-on-disk/33174577
+
 Model Pipelines https://docs.databricks.com/spark/latest/mllib/model-export.html
+
+https://www.ibm.com/blogs/bluemix/2018/03/predictive-machine-learning-model-build-retrain/
 
 https://docs.azuredatabricks.net/_static/notebooks/model-export-scala.html
 
@@ -24,13 +82,52 @@ Model training https://docs.microsoft.com/en-us/sql/big-data-cluster/train-and-c
 
 XGBoost save https://xgboost.readthedocs.io/en/latest/jvm/xgboost4j_spark_tutorial.html#model-persistence
 
+https://console.bluemix.net/docs/tutorials/create-deploy-retrain-machine-learning-model.html#build-deploy-test-and-retrain-a-predictive-machine-learning-model 
+
 Spark Pipeline & save models https://spark.apache.org/docs/2.1.1/ml-pipeline.html#saving-and-loading-pipelines
 
+Training validation Datasets https://medium.com/datadriveninvestor/data-science-essentials-why-train-validation-test-data-b7f7d472dc1f 
 
+Data export https://stackoverflow.com/questions/31937958/how-to-export-data-from-spark-sql-to-csv/31939985
 
+https://www.ibm.com/blogs/bluemix/2018/03/predictive-machine-learning-model-build-retrain/
 
+data export https://stackoverflow.com/questions/31937958/how-to-export-data-from-spark-sql-to-csv/31939985
 
+Docker commands https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
 
+https://stackoverflow.com/questions/31674530/write-single-csv-file-using-spark-csv
+
+https://towardsdatascience.com/pump-up-the-volumes-data-in-docker-a21950a8cd8 
+
+https://towardsdatascience.com/learn-enough-docker-to-be-useful-b0b44222eef5 
+
+https://becominghuman.ai/how-to-build-a-deep-learning-server-based-on-docker-bea70b8bd2c7 
+
+https://towardsdatascience.com/pump-up-the-volumes-data-in-docker-a21950a8cd8 
+
+https://towardsdatascience.com/learn-enough-docker-to-be-useful-1c40ea269fa8
+
+https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481 
+https://medium.com/botsupply/tensorflow-docker-production-ready-ai-product-ae30435ad8e9 
+
+https://hackernoon.com/a-tale-of-two-docker-multi-stage-build-layers-85348a409c84 
+
+Kubernetes https://medium.freecodecamp.org/learn-kubernetes-in-under-3-hours-a-detailed-guide-to-orchestrating-containers-114ff420e882 
+
+Kubernetes for airflow https://towardsdatascience.com/kubernetesexecutor-for-airflow-e2155e0f909c
+
+https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b 
+
+https://medium.freecodecamp.org/a-beginner-friendly-introduction-to-containers-vms-and-docker-79a9e3e119b 
+
+https://medium.freecodecamp.org/how-to-develop-a-flask-graphql-graphene-mysql-and-docker-starter-kit-4d475f24ee76 
+
+ML Docker https://blogs.technet.microsoft.com/machinelearning/2018/03/15/demystifying-docker-for-data-scientists-a-docker-tutorial-for-your-deep-learning-projects/
+
+All spark docker https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html 
+
+MLFlow https://github.com/mlflow/mlflow
 
 CNN Keras https://becominghuman.ai/building-an-image-classifier-using-deep-learning-in-python-totally-from-a-beginners-perspective-be8dbaf22dd8
 DL IDE https://deepcognition.ai/
@@ -38,21 +135,6 @@ DL IDE https://deepcognition.ai/
 PIL image manager https://automatetheboringstuff.com/chapter17/
 
 DL tutorial https://github.com/donnemartin/data-science-ipython-notebooks#deep-learning
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Databricks
 
 DL Spark https://www.kdnuggets.com/2018/05/deep-learning-apache-spark-part-2.html
@@ -109,13 +191,19 @@ https://databricks.github.io/spark-deep-learning/docs/_site/api/python/sparkdl.u
 
 sparkflow https://github.com/kartikmehta09/sparkflow . https://medium.com/lifeomic/sparkflow-train-tensorflow-models-with-apache-spark-pipelines-74dca32f60f3
 
-
 Spark for DL - yes or no https://www.quora.com/Is-Apache-Spark-a-good-framework-for-implementing-Deep-Learning
 
 facebook horozon for RL https://arxiv.org/abs/1811.00260 .   https://code.fb.com/ml-applications/horizon/
 
 https://github.com/facebookresearch/Horizon https://xaviergeerinck.com/facebook-horizon https://xaviergeerinck.com/facebook-horizon
 
+Pytorch https://www.slideshare.net/lymanblueLin/update-pytorch-tutorial-for-ntu-machine-learing-course-2017?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=12
+https://www.slideshare.net/lymanblueLin/pytorch-tutorial-for-ntu-machine-learing-course-2017?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=10
+https://www.slideshare.net/JunYoungPark35/introduction-to-pytorch?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=16
+https://www.slideshare.net/databricks/a-tale-of-three-deep-learning-frameworks-tensorflow-keras-pytorch-with-brooke-wenig-and-jules-damji?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=20
+https://www.slideshare.net/search/slideshow?lang=en&page=2&q=pytorch&qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&searchfrom=header&sort=relevance
+https://www.slideshare.net/databricks/a-tale-of-three-deep-learning-frameworks-tensorflow-keras-pytorch-with-brooke-wenig-and-jules-damji?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=20
+https://www.slideshare.net/EdurekaIN/pytorch-vs-tensorflow-the-force-is-strong-with-which-one-which-one-you-should-learn-edureka?qid=dc7af6d1-2ebe-41a5-b197-3527056cc2fa&v=&b=&from_search=24
 
 
 
