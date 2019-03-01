@@ -64,6 +64,32 @@ https://www.ibm.com/blogs/bluemix/2018/03/predictive-machine-learning-model-buil
 
 https://docs.azuredatabricks.net/_static/notebooks/model-export-scala.html
 
+https://docs.databricks.com/_static/notebooks/tensorflow-and-spark.html
+https://docs.databricks.com/applications/deep-learning/deep-learning-pipelines.html
+https://docs.databricks.com/delta/index.html
+
+https://docs.databricks.com/user-guide/index.html
+
+https://docs.databricks.com/applications/deep-learning/deep-learning-pipelines.html#deep-learning-pipelines-1
+
+https://docs.databricks.com/applications/deep-learning/distributed-deep-learning/index.html
+
+https://docs.databricks.com/applications/deep-learning/tensorflow.html
+
+https://docs.databricks.com/applications/deep-learning/mxnet.html
+
+https://docs.databricks.com/applications/deep-learning/keras.html
+https://docs.databricks.com/applications/deep-learning/caffe.html
+https://databricks.github.io/spark-deep-learning/docs/_site/api/python/index.html#sparkdl.HorovodRunner
+https://docs.databricks.com/spark/latest/data-sources/read-json.html
+
+https://community.hortonworks.com/questions/121361/loading-a-json-file-from-url-into-a-spark-datafram.html
+
+ML Flow https://github.com/ex00/docker-mlflow
+Docker ML flow https://hub.docker.com/r/jiankaiwang/mlflow
+https://towardsdatascience.com/getting-started-with-mlflow-52eff8c09c61 
+https://www.mlflow.org/docs/latest/quickstart.html
+
 Model save scala https://docs.azuredatabricks.net/_static/notebooks/model-export-scala.html
 https://docs.azuredatabricks.net/_static/notebooks/model-export-scala.html
 
