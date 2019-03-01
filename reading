@@ -21,6 +21,8 @@ scala df https://docs.databricks.com/spark/latest/dataframes-datasets/introducti
 Cross validation https://bryancutler.github.io/cv-pipelines/ Hyper parameter https://www.oreilly.com/ideas/big-datas-biggest-secret-hyperparameter-tuning
 cross val, 10 fold https://rapidminer.com/blog/validate-models-cross-validation/
 
+train test split https://towardsdatascience.com/train-test-split-and-cross-validation-in-python-80b61beca4b6
+
 Best Model https://forums.databricks.com/questions/12097/pyspark-how-to-get-best-params-in-grid-search.html
 https://mapr.com/blog/churn-prediction-sparkml/
 https://mapr.com/blog/fast-data-processing-pipeline-predicting-flight-delays-using-apache-apis-pt-1/
@@ -138,6 +140,45 @@ https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-
 https://medium.com/botsupply/tensorflow-docker-production-ready-ai-product-ae30435ad8e9 
 
 https://hackernoon.com/a-tale-of-two-docker-multi-stage-build-layers-85348a409c84 
+
+https://github.com/NVIDIA/nvidia-docker
+https://github.com/Paperspace/fastai-docker/tree/master/fastai-v2
+https://nji-syd.github.io/2018/03/26/up-and-running-with-fast-ai-and-docker/
+https://towardsdatascience.com/deploying-machine-learning-models-with-docker-5d22a4dacb5
+
+
+
+Ludwig https://github.com/uber/ludwig
+https://eng.uber.com/michelangelo-pyml/
+https://uber.github.io/ludwig/getting_started/
+https://uber.github.io/ludwig/getting_started/
+https://uber.github.io/ludwig/developer_guide/
+https://eng.uber.com/introducing-ludwig/
+https://github.com/uber/ludwig
+https://medium.com/syncedreview/ubers-code-free-ludwig-deep-learning-for-dummies-45c59ee47fa
+
+https://medium.com/syncedreview/ubers-code-free-ludwig-deep-learning-for-dummies-45c59ee47fa
+
+https://towardsdatascience.com/introducing-ubers-ludwig-5bd275a73eda
+
+https://eng.uber.com/
+
+https://github.com/uber/ludwig
+https://hub.docker.com/u/uber
+https://github.com/NVIDIA/nvidia-docker/wiki/Motivation
+
+
+h20 
+https://developer.ibm.com/tutorials/deploy-driverless-ai-into-kubernetes-cluster/
+https://stackoverflow.com/questions/51149201/connect-python-with-h2o-that-runs-in-docker-but-ipv4-for-h2o-changes
+
+http://www.mauropelucchi.com/blog/docker-and-h2o/
+https://www.h2o.ai/blog/h2o-docker/
+
+https://hub.docker.com/r/lkwg82/h2o-http2-server/
+
+
+
 
 Kubernetes https://medium.freecodecamp.org/learn-kubernetes-in-under-3-hours-a-detailed-guide-to-orchestrating-containers-114ff420e882 
 
