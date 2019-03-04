@@ -1,0 +1,23 @@
+
+Online Learning Vs Batch Learning
+
+Online learning is a method of machine learning that stores and processes only one training example at a time sequentially. It assumes an initial predictive model and updates its parameters for future predictions at each step. Other algorithms based on batch learning perform training on the whole batch.
+Batch learning requires the whole batch to be stored in the memory and once we have some new training data, the model has to retrain on the entire set again.  Since online learning processes only one training example at a time, its storage requirements are met even by an average system that is able to fit at least one training example in memory.
+In online learning, we update our parameters by adding (minus sign) the gradient computed on a single instance of the dataset. Since it’s based on one random data point, it’s very noisy and may go off in a direction far from the batch gradient. Batch learning updates are based on a batch of training examples and hence intermediate updates are much more stable.
+Let’s say we want to build a model that identifies spam emails. One way is to download a large corpus of emails, train a model on it and subsequently test it on unseen examples. This is called offline learning. Another way is to take in each email sequentially and continuously update the parameters in a classifier. You guessed it – this is online learning.
+
+https://www.analyticsvidhya.com/blog/2018/01/online-learning-guide-text-classification-vowpal-wabbit-vw/
+
+Going back to our example of spam classification, imagine a situation where the spammers have found a work-around and started bypassing the existing spam classifier. Two teams have been tasked to solve the problem – The Batch Learning Team and the Online Learning team.
+
+This scenario will be a nightmare for the Batch Learning Team. They will first have to label the new spam emails as spam. Following that, they will retrain the model on the entire dataset to get the new model and then deploy it in production.
+The Online Learning Team will still have to label the new spam, but they can do away with retraining the model on the whole dataset. Instead, they can feed the stream of freshly labelled data to an already existing online learning model. They can sit back as it updates the existing model and learns new parameters from each new sample sequentially.
+
+Vowpal Wabbit – A Framework for Online Learning
+SkLearn has SGDClassifier and SGDRegressor from sklearn.linear_model. These are nice implementations of SGD/online learning but we’ll focus on Vowpal Wabbit as it’s superior to sklearn’s SGD models in many aspects, including computational performance. The Vowpal Wabbit (VW) project is a fast online learning framework sponsored by Microsoft Research and (previously) Yahoo! Research.
+
+When it comes to categorical variables, label encoding or one hot encoding are popular methods of dealing with it. These are good, if we are able to store and process the whole dataset. But online learning does not have the liberty of looking at the complete dataset. Also, real data can be volatile and we cannot guarantee that new values of categorical features will not be added at some point. This issue hampers the use of the trained model when some new data is introduced,
+
+This is where Vowpal Wabbit comes into the picture.
+
+The idea is very simple: convert data into a vector of features. When this is done using hashing, we call the method “feature hashing” or “the hashing trick”.
