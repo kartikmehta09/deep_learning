@@ -1,3 +1,44 @@
+ml FLOW https://mlflow.org/docs/latest/python_api/mlflow.spark.html#module-mlflow.spark
+https://mlflow.org/docs/latest/python_api/mlflow.tensorflow.html#module-mlflow.tensorflow
+
+https://mlflow.org/docs/latest/python_api/mlflow.sagemaker.html#module-mlflow.sagemaker
+
+https://mlflow.org/docs/latest/tutorial.html#training-the-model
+
+https://mlflow.org/docs/latest/tutorial.html#comparing-the-models
+
+https://mlflow.org/docs/latest/models.html
+https://hub.docker.com/r/jiankaiwang/mlflow
+
+https://towardsdatascience.com/model-tracking-tools-for-data-science-mlflow-51b681f8452e
+
+https://mlflow.org/docs/latest/quickstart.html
+
+https://github.com/kartikmehta09/mlflow-basis
+https://github.com/ex00/docker-mlflow/tree/master/examples
+
+https://github.com/ex00/docker-mlflow/tree/master/examples/tutorial
+https://github.com/ex00?tab=repositories
+https://towardsdatascience.com/getting-started-with-mlflow-52eff8c09c61
+
+GITHUB Computer vision https://github.com/kartikmehta09/PyTorch-for-Deep-Learning-and-Computer-Vision-Course-All-Codes-
+
+pytorch https://github.com/jcjohnson/pytorch-examples
+
+https://github.com/ex00/docker-mlflow/blob/master/examples/tutorial/train_diabetes.py
+
+fastai https://forums.fast.ai/t/docker-for-fast-ai/9819
+
+pytorch https://github.com/Cadene/pretrained-models.pytorch 
+
+https://github.com/ex00/pytorch-sentiment-analysis
+
+ALL SPARK  http://dadinjaenudin.com/jupiter-notebook-running-with-docker/ 
+https://nji-syd.github.io/2018/03/26/up-and-running-with-fast-ai-and-docker/
+
+
+
+
 Accuracy F Score https://medium.com/datadriveninvestor/accuracy-trap-pay-attention-to-recall-precision-f-score-auc-d02f28d3299c
 
 Reading images https://www.geeksforgeeks.org/working-images-python/
@@ -43,6 +84,46 @@ https://stackoverflow.com/questions/33027767/save-ml-model-for-future-usage
 https://spark.apache.org/docs/2.2.0/mllib-pmml-model-export.html
 https://stackoverflow.com/questions/45986697/using-saved-spark-model-to-evaluate-new-data
 https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/ml/PipelineExample.scala
+
+
+fastai
+https://medium.com/@hiromi_suenaga
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-10-422d87c3340c
+https://becominghuman.ai/3-lines-of-code-deciphering-fast-ai-658e79151af8
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-12-215dfbf04a94
+
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-11-61477d24dc34
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-9-5f0cf9e4bb5b
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-2-lesson-8-5ae195c49493
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-4-2048a26d58aa
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-3-74b0ef79e56
+
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-2-eeae2edd2be4
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-1-602f73869197
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-7-1b9503aff0c
+https://medium.com/@hiromi_suenaga/deep-learning-2-part-1-lesson-6-de70d626976c
+https://medium.com/datadriveninvestor/deep-learning-with-python-and-fast-ai-part-2-nlp-classification-with-transfer-learning-e7aaf7514e04
+https://towardsdatascience.com/what-youll-learn-from-fast-ai-v2-lesson-2-6e700ab24b2c
+https://medium.com/datadriveninvestor/deploy-your-pytorch-model-to-production-f69460192217
+https://towardsdatascience.com/fast-ai-season-1-episode-3-a-case-of-multi-label-classification-a4a90672a889
+https://www.kaggle.com/hortonhearsafoo/fast-ai-lesson-1
+https://github.com/Paperspace/fastai-docker/tree/master/fastai-v2
+https://forums.fast.ai/t/docker-for-fast-ai/9819
+https://forums.fast.ai/t/why-cant-we-just-skip-to-unfreezing-layers-and-train-all-layers-of-the-model/10932
+
+
+https://www.oreilly.com/ideas/mlflow-a-platform-for-managing-the-machine-learning-lifecycle
+https://medium.com/@yuu.ishikawa/getting-started-with-mlflow-9c2f2543dce3
+https://www.oreilly.com/ideas/mlflow-a-platform-for-managing-the-machine-learning-lifecycle
+https://www.oreilly.com/ideas/lessons-learned-turning-machine-learning-models-into-real-products-and-services
+https://www.oreilly.com/ideas/managing-risk-in-machine-learning-models
+https://towardsdatascience.com/model-tracking-tools-for-data-science-mlflow-51b681f8452e
+
+airflow https://pypi.org/project/apache-airflow/ 
+https://medium.com/@GaryStafford/getting-started-with-pyspark-for-big-data-analytics-using-jupyter-notebooks-and-docker-ba39d2e3d6c7
+https://airflow.apache.org/installation.html
+
+docker http://dadinjaenudin.com/jupiter-notebook-running-with-docker/ 
 
 case class https://mapr.com/blog/predicting-breast-cancer-using-apache-spark-machine-learning-logistic-regression/
 
@@ -123,6 +204,7 @@ https://www.ibm.com/blogs/bluemix/2018/03/predictive-machine-learning-model-buil
 data export https://stackoverflow.com/questions/31937958/how-to-export-data-from-spark-sql-to-csv/31939985
 
 Docker commands https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
+https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/
 
 https://stackoverflow.com/questions/31674530/write-single-csv-file-using-spark-csv
 
