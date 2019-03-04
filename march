@@ -1,3 +1,20 @@
+fasttext
+
+https://www.kaggle.com/vsmolyakov/keras-cnn-with-fasttext-embeddings
+
+https://www.kaggle.com/nzw0301/simple-keras-fasttext-val-loss-0-31
+
+fasttext imdb https://github.com/keras-team/keras/blob/master/examples/imdb_fasttext.py
+
+https://keras.io/examples/imdb_fasttext/ . https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html 
+
+https://blog.manash.me/how-to-use-pre-trained-word-vectors-from-facebooks-fasttext-a71e6d55f27
+
+https://martinbel.github.io/fast-text.html
+
+https://www.analyticsvidhya.com/blog/2018/01/online-learning-guide-text-classification-vowpal-wabbit-vw/
+
+Online Learning with Text Classification using Vowpal Wabbit
 
 Online Learning Vs Batch Learning
 
