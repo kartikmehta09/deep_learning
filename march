@@ -38,3 +38,68 @@ When it comes to categorical variables, label encoding or one hot encoding are p
 This is where Vowpal Wabbit comes into the picture.
 
 The idea is very simple: convert data into a vector of features. When this is done using hashing, we call the method “feature hashing” or “the hashing trick”.
+
+
+ROS
+
+ROS package structure http://www.artificialhumancompanions.com/structure-python-based-ros-package/
+
+https://atadiat.com/ar/programming-robot-operating-system-introduction/
+
+https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/
+http://www2.ece.ohio-state.edu/~zhang/RoboticsClass/docs/ECE5463_ROSTutorialLecture1.pdf
+
+https://atadiat.com/ar/programming-robot-operating-system-introduction/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=ignite_wp_page
+http://wiki.ros.org/rospy_tutorials/Tutorials
+
+http://wiki.ros.org/melodic/Installation/Debian
+
+Catkin http://docs.ros.org/melodic/api/catkin/html/howto/format2/installing_python.html 
+
+class http://www.theconstructsim.com/ros-developers-live-class-develop-with-ros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=live_class_page 
+http://www.theconstructsim.com/ros-developers-live-class-develop-with-ros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=live_class_page
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/using-openai-with-ros-online-course/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-courses-ros-navigation-in-5-days/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-creation-with-urdf/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-creation-building-and-rosifying-a-robot-from-scratch/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-python-course/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-ai-deep-learning-domain-randomization/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-deep-learning-with-tensor-flow-101-python/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/using-openai-with-ros-online-course/
+
+TF http://wiki.ros.org/tf/Tutorials
+http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf
+http://wiki.ros.org/tf/Tutorials
+
+http://wiki.ros.org/stage/Tutorials
+
+http://wiki.ros.org/dynamixel_controllers/Tutorials
+http://wiki.ros.org/Industrial/Tutorials
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF
+http://wiki.ros.org/navigation/Tutorials
+
+http://wiki.ros.org/nodelet/Tutorials
+
+http://wiki.ros.org/kobuki/Tutorials/Write%20your%20own%20controller%20for%20Kobuki
+http://wiki.ros.org/actionlib_tutorials/Tutorials
+http://wiki.ros.org/visualization/Tutorials
+http://wiki.ros.org/ROS/Tutorials/
+
+https://www.allaboutcircuits.com/technical-articles/an-introduction-to-robot-operating-system-ros/
+http://wiki.ros.org/rosserial?distro=kinetic
+
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF
+http://wiki.ros.org/pcl/Tutorials
+https://answers.ros.org/question/283140/how-to-import-python-modules-to-my-node/
+
+University http://www2.ece.ohio-state.edu/~zhang/RoboticsClass/docs/ECE5463_ROSTutorialLecture1.pdf 
