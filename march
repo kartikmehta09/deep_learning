@@ -1,3 +1,51 @@
+Unique ID increment Spark
+https://hadoopist.wordpress.com/2016/05/24/generate-unique-ids-for-each-rows-in-a-spark-dataframe/
+https://stackoverflow.com/questions/38875599/add-index-column-to-existing-sparks-dataframe/42025500
+https://stackoverflow.com/questions/43406887/spark-dataframe-how-to-add-a-index-column-aka-distributed-data-index
+
+https://stackoverflow.com/questions/43406887/spark-dataframe-how-to-add-a-index-column-aka-distributed-data-index
+
+/**
+  * DistributedDataIndex : Program to index an RDD  with
+  */
+object DistributedDataIndex extends App with Logging {
+
+  val spark = builder
+    .master("local[*]")
+    .appName(this.getClass.getName)
+    .getOrCreate()
+
+  import spark.implicits._
+
+  val df = spark.sparkContext.parallelize(
+    Seq("Ram Ghadiyaram", "Ravichandra", "ilker", "nick"
+      , "Naveed", "Gobinathan SP", "Sreenivas Venigalla", "Jackela Kowski", "Arindam Sengupta", "Liangpi", "Omar14", "anshu kumar"
+    )).toDF("Name")
+  df.show
+  logInfo("addColumnIndex here")
+  // Add index now...
+  val df1WithIndex = addColumnIndex(df)
+    .withColumn("monotonically_increasing_id", monotonically_increasing_id)
+  df1WithIndex.show(false)
+
+  /**
+    * Add Column Index to dataframe
+    */
+  def addColumnIndex(df: DataFrame) = {
+    spark.sqlContext.createDataFrame(
+      df.rdd.zipWithIndex.map {
+        case (row, index) => Row.fromSeq(row.toSeq :+ index)
+      },
+      // Create schema for index column
+      StructType(df.schema.fields :+ StructField("index", LongType, false)))
+  }
+}
+
+
+https://medium.com/@mrpowers/a-tour-of-column-predicate-methods-in-spark-5b1467d53c21
+
+Spark 
+Distinct https://stackoverflow.com/questions/1538598/how-in-scala-to-find-unique-items-in-list
 fasttext
 
 https://www.kaggle.com/vsmolyakov/keras-cnn-with-fasttext-embeddings
