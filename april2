@@ -1,0 +1,487 @@
+Scala 
+
+https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-DataFrame.html
+https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-DataFrame.html
+https://www.programcreek.com/scala/org.apache.spark.ml.PipelineModel
+https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/scala-walkthrough
+
+https://stackoverflow.com/questions/36349281/how-to-loop-through-each-row-of-dataframe-in-pyspark
+
+def customFunction(row):
+
+   return (row.name, row.age, row.city)
+
+sample2 = sample.rdd.map(customFunction)
+
+
+https://stackoverflow.com/questions/33030726/how-to-iterate-records-spark-scala
+scala> persons.filter("age > 20").collect().foreach(println)
+[Michael,29]
+[Andy,30]
+
+scala> persons.collect().filter(r => r.getInt(1) >= 20).foreach(println)
+[Michael,29]
+[Andy,30]
+https://www.scala-lang.org/api/2.9.3/scala/collection/mutable/ListBuffer.html
+
+import scala.collection.mutable.ListBuffer
+
+https://docs.scala-lang.org/overviews/collections/iterators.html
+https://stackoverflow.com/questions/36203299/scala-listbuffer-emptying-itself-after-every-add-in-loop
+https://alvinalexander.com/scala/how-add-elements-to-a-list-in-scala-listbuffer-immutable
+
+var fruits = new ListBuffer[String]()
+fruits += "Apple"
+fruits += "Banana"
+fruits += "Orange"
+val fruitsList = fruits.toList
+
+
+http://allaboutscala.com/tutorials/chapter-7-beginner-tutorial-using-scala-mutable-collection/scala-tutorial-learn-use-mutable-listbuffer/
+
+import scala.collection.mutable.ListBuffer
+println("Step 1: How to initialize a ListBuffer with 3 elements")
+val listBuffer1: ListBuffer[String] = ListBuffer("Plain Donut","Strawberry Donut","Chocolate Donut")
+println(s"Elements of listBuffer1 = $listBuffer1")
+
+https://www.tutorialkart.com/apache-spark/spark-append-concatenate-datasets-example/#syntax-of-datasetunion-method
+
+https://alvinalexander.com/scala/while-do-while-loops-syntax-examples
+https://alvinalexander.com/scala/iterating-scala-lists-foreach-for-comprehension
+https://alvinalexander.com/scala/while-do-while-loops-syntax-examples
+https://alvinalexander.com/scala/iterating-scala-lists-foreach-for-comprehension
+https://www.dotnetperls.com/list-scala
+https://mapr.com/blog/using-apache-spark-dataframes-processing-tabular-data/
+http://apachesparkbook.blogspot.com/search/label/a52%7C%20foreach%28%29
+Yeild . https://alvinalexander.com/scala/scala-for-loop-yield-examples-yield-tutorial
+scala> val a = Array(1, 2, 3, 4, 5)
+a: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> for (e <- a) yield e
+res5: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> for (e <- a) yield e * 2
+res6: Array[Int] = Array(2, 4, 6, 8, 10)
+
+scala> for (e <- a) yield e % 2
+res7: Array[Int] = Array(1, 0, 1, 0, 1)
+
+Loop
+https://backtobazics.com/scala/scala-while-do-while-and-for-loop-syntax-and-example-code/
+//for (variable 
+scala> for(element 1 to 5) println("Element of range is : " + element)
+Element of range is : 1
+Element of range is : 2
+Element of range is : 3
+Element of range is : 4
+Element of range is : 5
+ 
+//for (variable 
+scala> for(element if element%2 != 0; if element!= 7) println("Element of list is : " + element)
+Element of list is : 1
+Element of list is : 3
+Element of list is : 5
+Element of list is : 9
+
+
+Union Dataframe
+https://docs.databricks.com/spark/latest/faq/append-a-row-to-rdd-or-dataframe.html
+
+val firstDF = spark.range(3).toDF("myCol")
+val newRow = Seq(20)
+val appended = firstDF.union(newRow.toDF())
+display(appended)
+
+https://stackoverflow.com/questions/36926856/spark-sql-how-to-append-new-row-to-dataframe-table-from-another-table
+
+import org.apache.spark.sql.SaveMode
+
+var input = spark.createDataFrame(Seq(
+        (10L, "Joe Doe", 34),
+        (11L, "Jane Doe", 31),
+        (12L, "Alice Jones", 25)
+        )).toDF("id", "name", "age")
+
+//--> just for a running example: In my case the table already exists
+var output = spark.createDataFrame(Seq(
+        (0L, "Jack Smith", 41, "yes", 1459204800L),
+        (1L, "Jane Jones", 22, "no", 1459294200L),
+        (2L, "Alice Smith", 31, "", 1459595700L)
+        )).toDF("id", "name", "age", "init", "ts")
+
+output.write.mode(SaveMode.Overwrite).saveAsTable("appendTest");
+//<--
+
+input.createOrReplaceTempView("inputTable");
+
+spark.sql("INSERT INTO TABLE appendTest SELECT id, name, age, null, null FROM inputTable");
+val df = spark.sql("SELECT * FROM appendTest")
+df.show()
+
+Iterrate over rows
+https://stackoverflow.com/questions/49252670/iterate-rows-and-columns-in-spark-dataframe
+https://stackoverflow.com/questions/43489807/scala-spark-how-to-union-all-dataframe-in-loop
+List buffer
+https://stackoverflow.com/questions/46097909/loop-over-listbuffer-scala
+https://stackoverflow.com/questions/14267612/scala-check-if-element-is-present-in-a-list/32931656
+https://www.programcreek.com/scala/org.apache.spark.sql.Row
+
+https://stackoverflow.com/questions/32551919/how-to-use-column-isin-with-list
+val items = List("a", "b", "c")
+
+sqlContext.sql("select c1 from table")
+          .filter($"c1".isin(items:_*))
+          .collect
+          .foreach(println)
+
+df.filter(column_name.isin(seqOfString: _*))
+
+https://medium.com/@mrpowers/a-tour-of-column-predicate-methods-in-spark-5b1467d53c21
+val primaryColors = List("red", "yellow", "blue")
+
+val sourceDF = spark.createDF(
+  List(
+    ("rihanna", "red"),
+    ("solange", "yellow"),
+    ("selena", "purple")
+  ), List(
+    ("celebrity", StringType, true),
+    ("color", StringType, true)
+  )
+)
+
+sourceDF.withColumn(
+  "is_primary_color",
+  col("color").isin(primaryColors: _*)
+).show()
++---------+------+----------------+
+|celebrity| color|is_primary_color|
++---------+------+----------------+
+|  rihanna|   red|            true|
+|  solange|yellow|            true|
+|   selena|purple|           false|
++---------+------+----------------+
+
+List contains
+https://www.programming-idioms.org/idiom/12/check-if-list-contains-a-value/1431/scala
+val items: Seq[String] = List("a", "b", "c")
+items.contains("a")
+
+
+https://medium.com/luckspark/spark-tutorial-2-using-filter-and-count-63400604f09e
+val f1 = logrdd.filter(s => s.contains("E0"))
+f1.take(10).foreach(println)
+
+https://alvinalexander.com/scala/iterating-scala-lists-foreach-for-comprehension
+https://alvinalexander.com/scala/scala-for-loops-foreach-how-to-translated-by-compiler
+
+List Spark
+https://www.programcreek.com/scala/org.apache.spark.sql.Row
+
+https://www.programcreek.com/scala/org.apache.spark.sql.Row
+https://chih-ling-hsu.github.io/2017/03/28/how-to-change-schema-of-a-spark-sql-dataframe
+
+List Append
+https://stackoverflow.com/questions/52425954/how-to-append-elements-to-list-in-a-for-loop-scala
+
+
+Pyspark
+https://www.analyticsvidhya.com/blog/2016/10/spark-dataframe-and-operations/
+http://apachesparkbook.blogspot.com/search/label/a52%7C%20foreach%28%29
+https://towardsdatascience.com/python-pandas-vs-scala-how-to-handle-dataframes-part-ii-d3e5efe8287d
+
+
+Pattern Matching https://www.protechtraining.com/blog/post/an-introduction-to-pattern-matching-in-scala-842
+https://www.journaldev.com/8079/scala-tuples-and-maps-example
+https://www.journaldev.com/scala
+
+functions https://www.journaldev.com/7713/scala-functions-declaration-definition-invocation-and-nested-functions
+https://www.journaldev.com/7751/scala-closures-free-and-bound-variables-anonymous-functions
+Slice https://www.journaldev.com/11113/scala-slice-function
+https://www.journaldev.com/12122/scala-caseclass-caseobject-part2
+https://www.journaldev.com/9733/scala-caseclass-caseobject-part1
+https://www.journaldev.com/7497/scala-classes-objects-singleton-objects-companion-classes
+https://www.journaldev.com/7915/scala-arrays-example
+https://www.journaldev.com/7905/scala-loop-control-statements-while-do-while-for-loops
+https://www.journaldev.com/7905/scala-loop-control-statements-while-do-while-for-loops
+https://www.journaldev.com/7905/scala-loop-control-statements-while-do-while-for-loops
+https://www.journaldev.com/7898/scala-if-else-statement-example-tutorial
+https://www.journaldev.com/7830/scala-pattern-matching-with-case-statement
+https://www.journaldev.com/7830/scala-pattern-matching-with-case-statement
+https://www.journaldev.com/7751/scala-closures-free-and-bound-variables-anonymous-functions
+https://www.journaldev.com/scala
+
+
+List map
+scala map https://stackoverflow.com/questions/6823588/how-to-create-an-lookup-map-in-scala
+https://stackoverflow.com/questions/36562678/sparks-column-isin-function-does-not-take-list?noredirect=1&lq=1
+http://allaboutscala.com/tutorials/chapter-6-beginner-tutorial-using-scala-immutable-collection/scala-tutorial-learn-use-immutable-map/
+http://allaboutscala.com/tutorials/chapter-6-beginner-tutorial-using-scala-immutable-collection/scala-tutorial-learn-use-immutable-map/
+https://stackoverflow.com/questions/8016750/convert-list-of-tuple-to-map-and-deal-with-duplicate-key
+https://stackoverflow.com/questions/49362235/scala-how-to-initialize-a-map-of-maps-in-scala
+
+https://stackoverflow.com/questions/674639/scala-best-way-of-turning-a-collection-into-a-map-by-key
+http://uclmr.github.io/stat-nlp-book-scala/05_tutorial/02_intro_to_scala_part2.html
+
+
+https://stackoverflow.com/questions/6823588/how-to-create-an-lookup-map-in-scala
+
+case https://stackoverflow.com/questions/37064315/how-to-write-case-with-when-condition-in-spark-sql-using-scala/37108127
+
+https://www.edureka.co/community/6098/filtering-spark-dataframe-based-matching-values-from-list
+
+List https://stackoverflow.com/questions/18933405/print-first-element-in-list-using-scala
+https://stackoverflow.com/questions/33981487/filter-spark-dataframe-by-checking-if-value-is-in-a-list-with-other-criteria
+https://stackoverflow.com/questions/18933405/print-first-element-in-list-using-scala
+https://stackoverflow.com/questions/7571635/fastest-way-to-check-if-a-value-exist-in-a-list
+https://stackoverflow.com/questions/33981487/filter-spark-dataframe-by-checking-if-value-is-in-a-list-with-other-criteria
+
+functions
+http://allaboutscala.com/tutorials/chapter-8-beginner-tutorial-using-scala-collection-functions/scala-exists-function/
+
+Collections
+http://allaboutscala.com/tutorials/chapter-7-beginner-tutorial-using-scala-mutable-collection/scala-tutorial-learn-use-mutable-map/
+
+isin 
+http://sqlandhadoop.com/spark-dataframe-in-not-in/
+https://stackoverflow.com/questions/32551919/how-to-use-column-isin-with-list 
+https://stackoverflow.com/questions/40692025/how-to-update-column-based-on-a-condition-a-value-in-a-group
+https://stackoverflow.com/questions/40692025/how-to-update-column-based-on-a-condition-a-value-in-a-group
+
+https://www.dotnetperls.com/list-scala
+
+http://joelabrahamsson.com/learning-scala-part-four-classes-and-constructors/
+http://joelabrahamsson.com/learning-scala-part-two-installation-and-tools/
+
+http://fileadmin.cs.lth.se/scala/scala-impatient.pdf
+
+https://www.dotnetperls.com/list-scala
+
+http://uclmr.github.io/stat-nlp-book-scala/05_tutorial/02_intro_to_scala_part2.html
+
+https://alvinalexander.com/scala/how-to-use-scala-match-expression-like-switch-case-statement
+
+https://alvinalexander.com/scala/iterating-scala-lists-foreach-for-comprehension
+
+https://alvinalexander.com/scala/how-to-access-map-values-getorelse-scala-cookbook
+
+https://alvinalexander.com/scala/scala-maps-map-class-examples
+
+https://alvinalexander.com/scala/how-to-access-map-values-getorelse-scala-cookbook
+
+https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions
+
+https://alvinalexander.com/scala/create-iterating-scala-string-maps
+
+https://alvinalexander.com/scala/scala-maps-map-class-examples
+
+https://alvinalexander.com/scala/scala-if-then-ternary-operator-cookbook-examples
+
+https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala
+
+https://alvinalexander.com/scala/how-to-create-maps-class-examples-scala-cookbook
+
+https://alvinalexander.com/scala/how-to-use-if-then-expressions-guards-in-case-statements-scala
+
+https://alvinalexander.com/scala/scala-control-structures-examples-if-then-match-case-for
+
+https://alvinalexander.com/scala/create-iterating-scala-string-maps
+
+https://alvinalexander.com/scala/scala-if-then-else-syntax-returning-value-functional-programming
+
+https://alvinalexander.com/scala/how-to-extract-unique-elements-scala-sequences-cookbook
+
+https://alvinalexander.com/scala/how-to-get-map-class-keys-values-iterators-scala-cookbook 
+
+https://alvinalexander.com/scala/scala-class-examples-constructors-case-classes-parameters 
+
+https://alvinalexander.com/scala/how-to-create-multiple-class-constructors-in-scala-alternate-constructors 
+
+https://alvinalexander.com/scala/functional-programming-simplified-book 
+
+
+ML 
+
+https://stackoverflow.com/questions/32277576/how-to-handle-categorical-features-with-spark-ml
+
+https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1221303294178191/2620145786109408/6190062569763605/latest.html
+
+https://towardsdatascience.com/choosing-the-right-encoding-method-label-vs-onehot-encoder-a4434493149b
+
+https://towardsdatascience.com/feature-encoding-with-spark-2-3-0-part-1-9ede45562740
+https://towardsdatascience.com/@roshinijohri
+https://towardsdatascience.com/feature-encoding-made-simple-with-spark-2-3-0-part-2-5bfc869a809a
+https://towardsdatascience.com/feature-encoding-made-simple-with-spark-2-3-0-part-2-5bfc869a809a
+
+/////////
+fasttext
+
+https://www.kaggle.com/vsmolyakov/keras-cnn-with-fasttext-embeddings
+
+https://www.kaggle.com/nzw0301/simple-keras-fasttext-val-loss-0-31
+
+fasttext imdb https://github.com/keras-team/keras/blob/master/examples/imdb_fasttext.py
+
+https://keras.io/examples/imdb_fasttext/ . https://blog.keras.io/using-pre-trained-word-embeddings-in-a-keras-model.html 
+
+https://blog.manash.me/how-to-use-pre-trained-word-vectors-from-facebooks-fasttext-a71e6d55f27
+
+https://martinbel.github.io/fast-text.html
+
+https://www.analyticsvidhya.com/blog/2018/01/online-learning-guide-text-classification-vowpal-wabbit-vw/
+
+Online Learning with Text Classification using Vowpal Wabbit
+
+Online Learning Vs Batch Learning
+
+Online learning is a method of machine learning that stores and processes only one training example at a time sequentially. It assumes an initial predictive model and updates its parameters for future predictions at each step. Other algorithms based on batch learning perform training on the whole batch.
+Batch learning requires the whole batch to be stored in the memory and once we have some new training data, the model has to retrain on the entire set again.  Since online learning processes only one training example at a time, its storage requirements are met even by an average system that is able to fit at least one training example in memory.
+In online learning, we update our parameters by adding (minus sign) the gradient computed on a single instance of the dataset. Since it’s based on one random data point, it’s very noisy and may go off in a direction far from the batch gradient. Batch learning updates are based on a batch of training examples and hence intermediate updates are much more stable.
+Let’s say we want to build a model that identifies spam emails. One way is to download a large corpus of emails, train a model on it and subsequently test it on unseen examples. This is called offline learning. Another way is to take in each email sequentially and continuously update the parameters in a classifier. You guessed it – this is online learning.
+
+https://www.analyticsvidhya.com/blog/2018/01/online-learning-guide-text-classification-vowpal-wabbit-vw/
+
+Going back to our example of spam classification, imagine a situation where the spammers have found a work-around and started bypassing the existing spam classifier. Two teams have been tasked to solve the problem – The Batch Learning Team and the Online Learning team.
+
+This scenario will be a nightmare for the Batch Learning Team. They will first have to label the new spam emails as spam. Following that, they will retrain the model on the entire dataset to get the new model and then deploy it in production.
+The Online Learning Team will still have to label the new spam, but they can do away with retraining the model on the whole dataset. Instead, they can feed the stream of freshly labelled data to an already existing online learning model. They can sit back as it updates the existing model and learns new parameters from each new sample sequentially.
+
+Vowpal Wabbit – A Framework for Online Learning
+SkLearn has SGDClassifier and SGDRegressor from sklearn.linear_model. These are nice implementations of SGD/online learning but we’ll focus on Vowpal Wabbit as it’s superior to sklearn’s SGD models in many aspects, including computational performance. The Vowpal Wabbit (VW) project is a fast online learning framework sponsored by Microsoft Research and (previously) Yahoo! Research.
+
+When it comes to categorical variables, label encoding or one hot encoding are popular methods of dealing with it. These are good, if we are able to store and process the whole dataset. But online learning does not have the liberty of looking at the complete dataset. Also, real data can be volatile and we cannot guarantee that new values of categorical features will not be added at some point. This issue hampers the use of the trained model when some new data is introduced,
+
+This is where Vowpal Wabbit comes into the picture.
+
+The idea is very simple: convert data into a vector of features. When this is done using hashing, we call the method “feature hashing” or “the hashing trick”.
+
+
+ROS
+
+ROS package structure http://www.artificialhumancompanions.com/structure-python-based-ros-package/
+
+https://atadiat.com/ar/programming-robot-operating-system-introduction/
+
+https://husarion.com/tutorials/ros-tutorials/1-ros-introduction/
+http://www2.ece.ohio-state.edu/~zhang/RoboticsClass/docs/ECE5463_ROSTutorialLecture1.pdf
+
+https://atadiat.com/ar/programming-robot-operating-system-introduction/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=ignite_wp_page
+http://wiki.ros.org/rospy_tutorials/Tutorials
+
+http://wiki.ros.org/melodic/Installation/Debian
+
+Catkin http://docs.ros.org/melodic/api/catkin/html/howto/format2/installing_python.html 
+
+class http://www.theconstructsim.com/ros-developers-live-class-develop-with-ros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=live_class_page 
+http://www.theconstructsim.com/ros-developers-live-class-develop-with-ros/?utm_source=wiki.ros&utm_medium=tutorials&utm_campaign=live_class_page
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/using-openai-with-ros-online-course/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-courses-ros-navigation-in-5-days/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-creation-with-urdf/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-creation-building-and-rosifying-a-robot-from-scratch/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-python-course/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/robot-ai-deep-learning-domain-randomization/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/ros-deep-learning-with-tensor-flow-101-python/
+
+http://www.theconstructsim.com/construct-learn-develop-robots-using-ros/robotigniteacademy_learnros/ros-courses-library/using-openai-with-ros-online-course/
+
+TF http://wiki.ros.org/tf/Tutorials
+http://wiki.ros.org/tf/Tutorials/Introduction%20to%20tf
+http://wiki.ros.org/tf/Tutorials
+
+http://wiki.ros.org/stage/Tutorials
+
+http://wiki.ros.org/dynamixel_controllers/Tutorials
+http://wiki.ros.org/Industrial/Tutorials
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF
+http://wiki.ros.org/navigation/Tutorials
+
+http://wiki.ros.org/nodelet/Tutorials
+
+http://wiki.ros.org/kobuki/Tutorials/Write%20your%20own%20controller%20for%20Kobuki
+http://wiki.ros.org/actionlib_tutorials/Tutorials
+http://wiki.ros.org/visualization/Tutorials
+http://wiki.ros.org/ROS/Tutorials/
+
+https://www.allaboutcircuits.com/technical-articles/an-introduction-to-robot-operating-system-ros/
+
+
+RF 
+https://github.com/mkhattab/hackerrank-solutions/blob/master/track-1/bot-saves-princess.org
+
+https://machinelearning-python.blogspot.com/2017/08/hackerrank-artificial-intelligence-bot.html
+
+https://www.geeksforgeeks.org/position-of-robot-after-given-movements/
+https://www.geeksforgeeks.org/minimum-steps-to-reach-a-destination/
+https://www.geeksforgeeks.org/minimum-positive-points-to-reach-destination/
+https://www.hackerrank.com/challenges/saveprincess . https://www.hackerrank.com/challenges/saveprincess
+https://github.com/mkhattab/hackerrank-solutions/blob/master/track-1/bot-saves-princess.org
+
+
+2nd https://github.com/mkhattab/hackerrank-solutions/blob/master/track-1/bot-saves-princess-2.org 
+https://github.com/HugApps/hackerrank-solutions/blob/master/Bot%20Saves%20Princess2
+https://github.com/HugApps/hackerrank-solutions/blob/master/Bot%20Saves%20Princess2
+https://chaitanyabaweja.wordpress.com/2017/02/22/solution-to-hacker-ranks-bot-saves-princess/
+https://github.com/mkhattab/hackerrank-solutions/blob/master/track-1/bot-saves-princess.org
+
+https://www.hackerrank.com/challenges/botclean . https://www.hackerrank.com/challenges/botclean
+
+https://github.com/Murillo/Hackerrank-Artificial-Intelligence/blob/master/Bot-Building/botclean.py
+https://github.com/jHeavenlyDream/HackerRank/blob/master/src/com/hackerrank/artificalintelligence/botbuilding/BotClean.java
+https://techutils.in/blog/2016/02/17/botclean-hackerrank/
+http://techutils.in/page/9/
+http://fuykgy.blogspot.com/2018/09/botclean-challenge.html
+
+https://codereview.stackexchange.com/questions/131768/hackerrank-bot-saves-princess-2
+https://wanderoveryonder.fandom.com/wiki/The_Hero
+
+https://www.hackerrank.com/challenges/click-o-mania
+https://gist.github.com/codesections/10466892dd9e232500a7450929c16fac
+https://www.coursehero.com/file/p7ndpdq/516-Clickomania-Same-Game-Clickomania-or-Same-Game-BDD-02-is-a-computer-puzzle/
+https://wenku.baidu.com/view/16aa76758e9951e79b8927d9.html
+https://wenku.baidu.com/view/dd450c22af45b307e8719734.html
+
+Packman
+http://massivealgorithms.blogspot.com/2015/01/hackerrank-pacman-dfs.html
+https://github.com/TomLous/hackerrank/blob/master/src/main/scala/ai/astar_search/PacManDFS.scala
+
+https://github.com/TomLous/hackerrank/blob/master/src/main/scala/algorithms/warmup/SolveMeFirst.scala
+https://www2.cs.duke.edu/courses/spring16/compsci270/hw1/
+https://medium.com/@lennyboyatzis/ai-teaching-pacman-to-search-with-depth-first-search-ee57daf889ab
+https://medium.com/@lennyboyatzis/ai-teaching-pacman-to-search-with-depth-first-search-ee57daf889ab
+https://ipvs.informatik.uni-stuttgart.de/mlr/marc/teaching/Lecture-AI.pdf
+
+https://github.com/dmolony/Backgammon/blob/master/src/com/bytezone/backgammon/Game.java
+https://www.gnu.org/software/gnubg/manual/gnubg.html
+https://www.chegg.com/homework-help/questions-and-answers/consider-peg-solitaire-game-demonstrated-class-found-online-constrained-grid-presented-loc-q34950662
+https://www.gnu.org/software/gnubg/manual/gnubg.html
+
+https://people.rit.edu/nxe4814/105/project2/
+http://www.aclweb.org/anthology/W15-5904
+https://www.shivarweb.com/11495/how-to-advertise-on-craigslist/
+https://nycdatascience.com/blog/student-works/web-scraping/scraping-used-items-on-craigslist-org-with-scrapy/
+https://nycdatascience.com/blog/student-works/scraping-craiglist/
+https://www.dataquest.io/blog/apartment-finding-slackbot
+
+https://www.hackerrank.com/challenges/document-classification/problem
+
+
+
+
+
+
+http://wiki.ros.org/rosserial?distro=kinetic
+
+http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF
+http://wiki.ros.org/pcl/Tutorials
+https://answers.ros.org/question/283140/how-to-import-python-modules-to-my-node/
+
+University http://www2.ece.ohio-state.edu/~zhang/RoboticsClass/docs/ECE5463_ROSTutorialLecture1.pdf 
